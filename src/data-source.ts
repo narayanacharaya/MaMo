@@ -5,10 +5,11 @@ import Project from './entity/Project';
 
 export const AppDataSource = new DataSource({
   type: 'mysql',
-  host: process.env.DATABASE_HOST,
-  port: parseInt(process.env.DATABASE_PORT as string, 10),
-  username: process.env.DATABASE_USERNAME,
+  host: 'localhost',
+  port: 3306,
+  username: 'root',
   password: '',
+  database: 'worry-server',
   synchronize: true,
   logging: false,
   entities: [User, Project],

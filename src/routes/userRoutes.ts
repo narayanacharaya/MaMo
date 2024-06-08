@@ -1,9 +1,14 @@
 import { Router } from 'express';
-import { signup, login } from '../controllers/userController';
+import {
+  signup,
+  login,
+  signupvalidator,
+  siginValidator,
+} from '../controllers/userController';
 
 const router = Router();
 
-router.post('/signup', signup);
-router.post('/login', login);
+router.post('/signup', signupvalidator, signup);
+router.post('/login', siginValidator, login);
 
 export default router;
